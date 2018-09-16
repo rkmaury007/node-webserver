@@ -38,7 +38,7 @@ hbs.registerHelper('SayLoud', (text) =>{
 app.get('/', (req, res) => {
   //res.send('<h1>Hi this response</h1>');
   res.render('home.hbs', {
-    aboutPage:'This is home page',
+    aboutPage:'This is about page. Check others details',
     //currentYear:new Date().getFullYear()
   });
 });
@@ -57,5 +57,5 @@ app.get('/error',(req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server is running on ${port} port`);
+  console.log(`Server is listening on ${port} port`);
 });
