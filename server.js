@@ -43,6 +43,14 @@ app.get('/', (req, res) => {
   });
 });
 
+app.get('/project', (req, res) => {
+  //res.send('<h1>Hi this response</h1>');
+  res.render('project.hbs', {
+    projectDetails:'This is project details',
+    //currentYear:new Date().getFullYear()
+  });
+});
+
 app.get('/about',(req, res) => {
   res.render('about.hbs',{
     aboutPage:'This is demo',
