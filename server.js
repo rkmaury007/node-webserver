@@ -1,6 +1,7 @@
 const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
+const cool = require('cool-ascii-faces')
 
 var app = express();
 app.set('view engine', 'hbs');
@@ -57,6 +58,8 @@ app.get('/about',(req, res) => {
     //currentYear:new Date().getFullYear()
   });
 });
+
+app.get('/cool', (req, res) => res.send(cool()));
 
 app.get('/error',(req, res) => {
   res.send({
